@@ -24,14 +24,14 @@
 
 <!-- <meta name="twitter:card" content="summary_large_image"> -->
 
-<link rel="stylesheet" href="css">
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="/css">
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/index.css">
 <!-- <link rel="stylesheet" href="css/animsition.min.css"> -->
 
-<script async="" src="analytics.js"></script><script src="jquery.min.js"></script>
+<script async="" src="/analytics.js"></script><script src="/jquery.min.js"></script>
 <script>
-window.jQuery || document.write(‘<script src="js/jquery.min.js"><\/script>’)
+window.jQuery || document.write(‘<script src="/js/jquery.min.js"><\/script>’)
 </script>
 <!-- <script src="animsition.min.js"></script> -->
 
@@ -50,10 +50,10 @@ window.jQuery || document.write(‘<script src="js/jquery.min.js"><\/script>’)
 <body>
 
 <header>
-    <h1><a href="https://designmemo.jp/"><img src="logo.svg" width="180" height="22" alt="test"></a></h1>
+    <h1><a href="/"><img src="/logo.svg" width="180" height="22" alt="test"></a></h1>
     <nav class="clearfix">
-    <a href="https://designmemo.jp/archive.html" class="nav-left"><img src=".//icon_archive_white.svg" width="20" height="20" alt="Archive"></a>
-    <a href="https://designmemo.jp/about.html" class="nav-right"><img src=".//icon_user.svg" width="20" height="20" alt="About"></a>
+    <a href="/post/new" class="nav-left"><img src="/icon_archive_white.svg" width="20" height="20" alt="Archive"></a>
+    <a href="/about" class="nav-right"><img src="/icon_user.svg" width="20" height="20" alt="About"></a>
     </nav>
 </header>
 

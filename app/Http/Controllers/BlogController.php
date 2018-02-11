@@ -28,36 +28,14 @@ class BlogController extends Controller{
         //$this->layout->title = 'Laravel de Blog';
         //$this->layout->main = View::make('home')->nest('content', 'index', compact('posts'));
 
-        // DBから記事を取得する関数に集約する
-        // 1
-        // $posts = Post::orderBy('id', 'desc')->paginate(8);
-        // 2
-        // $posts = DB::table('user')->paginate(8);
-
-
-        $posts = array(
-            'test1' => array(    
-                'postname' => 'みかん',
-                'thumnail' => 'eyecatch_s.jpg',
-                'link' => '2',
-                'date' => '2018.02.07',
-            ),
-            'test2' => array(    
-                'postname' => 'りんごの食べ方',
-                'thumnail' => 'eyecatch_s.jpg',
-                'link' => '2',
-                'date' => '2018.02.07',
-            ),
-        );
-
+        
+        $posts = App\Post::get();
+    
         // home画面に渡すデータ
         $data = array(
-            'title' => 'Laravel de Blog', 
-            'subtitle' => 'sub title',
-            'content' => '',
+            'title' => \Config::get('global.title.home'), 
             'posts' => $posts,    
         );
-        
         return view('home', $data);
     }
 
@@ -86,7 +64,7 @@ class BlogController extends Controller{
     } 
 
     /**
-     * ログイン
+     * ログイン処理
      */
     public function postLogin()
     {
@@ -113,12 +91,11 @@ class BlogController extends Controller{
     }
 
     /**
-     * ログアウト
+     * ログアウト処理
      */
-    public function getLogout(){
+    public function getLogout()
+    {
         Auth::logout();
         return Redirect::to('/');
     }
-
-   
 }
